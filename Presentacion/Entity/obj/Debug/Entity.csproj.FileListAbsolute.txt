@@ -1,0 +1,6 @@
+C:\Users\MI COMPUTADOR\Documents\visual-2023\Presentacion\Entity\obj\Debug\Entity.csproj.AssemblyReference.cache
+C:\Users\MI COMPUTADOR\Documents\visual-2023\Presentacion\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\MI COMPUTADOR\Documents\visual-2023\Presentacion\Entity\bin\Debug\Entity.dll
+C:\Users\MI COMPUTADOR\Documents\visual-2023\Presentacion\Entity\bin\Debug\Entity.pdb
+C:\Users\MI COMPUTADOR\Documents\visual-2023\Presentacion\Entity\obj\Debug\Entity.dll
+C:\Users\MI COMPUTADOR\Documents\visual-2023\Presentacion\Entity\obj\Debug\Entity.pdb

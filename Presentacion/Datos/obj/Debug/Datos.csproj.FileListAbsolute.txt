@@ -1,0 +1,9 @@
+C:\Users\MI COMPUTADOR\Documents\visual-2023\Presentacion\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\MI COMPUTADOR\Documents\visual-2023\Presentacion\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\MI COMPUTADOR\Documents\visual-2023\Presentacion\Datos\bin\Debug\Datos.dll
+C:\Users\MI COMPUTADOR\Documents\visual-2023\Presentacion\Datos\bin\Debug\Datos.pdb
+C:\Users\MI COMPUTADOR\Documents\visual-2023\Presentacion\Datos\bin\Debug\Entity.dll
+C:\Users\MI COMPUTADOR\Documents\visual-2023\Presentacion\Datos\bin\Debug\Entity.pdb
+C:\Users\MI COMPUTADOR\Documents\visual-2023\Presentacion\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\MI COMPUTADOR\Documents\visual-2023\Presentacion\Datos\obj\Debug\Datos.dll
+C:\Users\MI COMPUTADOR\Documents\visual-2023\Presentacion\Datos\obj\Debug\Datos.pdb
