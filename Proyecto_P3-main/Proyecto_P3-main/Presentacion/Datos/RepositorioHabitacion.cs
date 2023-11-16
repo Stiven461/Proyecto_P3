@@ -59,6 +59,63 @@ namespace Datos
             }
         }
 
+        public bool Modificar(Habitacion habitacion)
+        {
+            List<Habitacion> habitaciones = new List<Habitacion>();
+            //habitaciones = listaHabitaciones();
+
+            try
+            {
+                FileStream file = new FileStream(FileName, FileMode.Create);
+                file.Close();
+
+                foreach (var HabitacionAnterior in listaHabitaciones())
+                {
+                    if ( HabitacionAnterior.idhabitacion != habitacion.idhabitacion)
+                    {
+                        Crear(HabitacionAnterior);
+                    }
+                    else
+                        Crear(habitacion);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al modificar la Habitacion: {ex.Message}");
+                return false;
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        public bool Eliminar(Habitacion habitacion)
+        {
+            List<Habitacion> habitaciones = new List<Habitacion>();
+            //habitaciones = Listar();
+
+            try
+            {
+                FileStream file = new FileStream(FileName, FileMode.Create);
+                file.Close();
+
+                foreach (var HabitacionAnterior in listaHabitaciones())
+                {
+                    if (HabitacionAnterior.idhabitacion != habitacion.idhabitacion)
+                    {
+                        Crear(habitacion);
+                    }
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al elminar la Habitacion: {ex.Message}");
+                return false;
+            }
+        }
+
+        
+        /////////////////////////////////////////////////////////////////////////////////////////////////
         public List<Habitacion> listaHabitaciones()
         {
             List<Habitacion> habitaciones = new List<Habitacion>();

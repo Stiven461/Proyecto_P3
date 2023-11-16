@@ -12,13 +12,13 @@ namespace Entity
 {
     public class Reserva
     {
-        private int idReserva;
-        private DateTime fechaEntrada;
-        private DateTime fechaSalida;
-        private Huesped huesped;
-        private Habitacion habitacion;
+        public int idReserva {  get; set; } 
+        public DateTime fechaEntrada {  get; set; } 
+        public DateTime fechaSalida {  get; set; }
+        public Huesped huesped {  get; set; }
+        public Habitacion habitacion {  get; set; }
 
-        private static int contId = 0;
+        
 
         public Reserva()
         {
@@ -26,11 +26,11 @@ namespace Entity
 
         public Reserva(DateTime fechaEntrada, DateTime fechaSalida, Huesped huesped, Habitacion habitacion)
         {
-            this.idReserva = ++contId;
-            this.fechaEntrada = fechaEntrada;
-            this.fechaSalida = fechaSalida;
-            this.huesped = huesped;
-            this.habitacion = habitacion;
+            //this.idReserva = ++contId;
+            //this.fechaEntrada = fechaEntrada;
+            //this.fechaSalida = fechaSalida;
+            //this.huesped = huesped;
+            //this.habitacion = habitacion;
         }
 
        

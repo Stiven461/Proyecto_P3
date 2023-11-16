@@ -41,6 +41,24 @@ namespace Logica
             }
         }
 
+        public Habitacion buscarHabitacion(string idhabitacion)
+        {
+            return repositorioHabitacion.buscarHabitacion(idhabitacion);
+        }
+
+        public bool Modificar(Habitacion habitacion)
+        {
+            return repositorioHabitacion.Modificar(habitacion);
+        }
+
+        /////////////////////////////////////////
+        public bool Eliminar(Habitacion habitacion)
+        {
+            return repositorioHabitacion.Eliminar(habitacion);
+        }
+
+        /////////////////////////////////
+
         public List<Habitacion> listaHabitacioens ()
         {
             return repositorioHabitacion.listaHabitaciones();

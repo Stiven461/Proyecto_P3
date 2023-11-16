@@ -32,8 +32,9 @@ namespace Presentacion
             habitacion.estado = cmbEstadoH.Text;
             habitacion.precio = decimal.Parse(txtPrecioH.Text);
             servicioHabitacion.Crear(habitacion);
-
+            tablaHabitaion();
             limpiarTexto();
+
 
         }
 
@@ -42,11 +43,12 @@ namespace Presentacion
             txtCodigoH.Text = string.Empty;
             txtPrecioH.Text = string.Empty; 
             cmbEstadoH.SelectedIndex = 0;
-            tablaHabitaion();
+            
         }
 
         public void tablaHabitaion()
         {
+            tblHabitaciones.Rows.Clear();
             foreach (Habitacion h in servicioHabitacion.listaHabitacioens())
             {
                 tblHabitaciones.Rows.Add(h.idhabitacion, h.estado, h.precio);
@@ -75,11 +77,88 @@ namespace Presentacion
 
         public void tablaHuesped()
         {
+
+            tblHuespedes.Rows.Clear();
             foreach (Huesped h in servicioHuesped.listaHuespedes())
             {
                 tblHuespedes.Rows.Add(h.tipoIdentificacion,h.identificacion,h.pais,h.nombreHuesped1,h.nombreHuesped2,h.apellidoHuesped,
                   h.apellidoHuesped2,h.emial,h.telefono,h.estado,h.cuenta);
             }
+        }
+
+        private void tblHabitaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int fila = tblHabitaciones.CurrentCell.RowIndex;
+
+            txtCodigoH.Text = tblHabitaciones[0, fila].Value.ToString();
+            cmbEstadoH.Text = tblHabitaciones[1, fila].Value.ToString();
+            txtPrecioH.Text = tblHabitaciones[2, fila].Value.ToString();
+            
+        }
+
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    Habitacion H = servicioHabitacion.buscarHabitacion(txtCodigoH.Text);
+            
+            
+        //    H.idhabitacion = txtCodigoH.Text;
+        //    H.estado = cmbEstadoH.Text;
+        //    H.precio = decimal.Parse(txtPrecioH.Text);
+        //    servicioHabitacion.Modificar(H);
+        //    tablaHabitaion();
+        //    limpiarTexto();
+        //}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Habitacion H = servicioHabitacion.buscarHabitacion(txtCodigoH.Text);
+
+            H.idhabitacion = txtCodigoH.Text;
+            H.estado = cmbEstadoH.Text;
+            H.precio = decimal.Parse(txtPrecioH.Text);
+            servicioHabitacion.Modificar(H);
+            tablaHabitaion();
+            limpiarTexto();
+            
+
+            if (servicioHabitacion.Modificar(H))
+            {
+                MessageBox.Show("L Actualizada exitosamente");
+                btnModificar.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Error al actualizar la Habitacion");
+            }
+
+            limpiarTexto();
+        }
+
+        //botton eliminar
+        private void button3_Click(object sender, EventArgs e)
+        {
+         
+            
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
